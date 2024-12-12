@@ -13,9 +13,10 @@ grupo=[]
 i=1
 while Numgps>=i:
     for time in continentes:
-        sorteio = random.choice(time)  # Sorteia diretamente o item
+        sorteio = random.choice(time)
         grupo.append(sorteio)
-    print(grupo)
+        
+    print(f"Grupo {i}: {grupo}")
     grupo=[]
     i+=1
 
