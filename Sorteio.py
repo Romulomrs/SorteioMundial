@@ -8,11 +8,18 @@ Africa=['Al-Ahly ','Wydad Casablanca','Mamelodi Sundowns','Espérance de Tunis']
 Asia=['Al-Hilal','Al Ain','Ulsan','Urawa Red Diamonds']
 Oceania=['Auckland City ']
 continentes=[Europa,America,Oceania,Asia]
+Numgps= len(Europa + America + Africa + Oceania + Asia)/4
 grupo=[]
-for time in continentes:
-    sorteio = random.choice(time)  # Sorteia diretamente o item
-    grupo.append(sorteio)
-print(grupo)
+i=1
+while Numgps>=i:
+    for time in continentes:
+        sorteio = random.choice(time)  # Sorteia diretamente o item
+        grupo.append(sorteio)
+    print(grupo)
+    grupo=[]
+    i+=1
+
+
 
 
     # while time in sorteio:  # Extrai o único elemento sorteado
