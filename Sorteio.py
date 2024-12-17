@@ -7,18 +7,25 @@ America=['Palmeiras','Botafogo','Flamengo',
 Africa=['Al-Ahly ','Wydad Casablanca','Mamelodi Sundowns','Espérance de Tunis']
 Asia=['Al-Hilal','Al Ain','Ulsan','Urawa Red Diamonds']
 Oceania=['Auckland City ']
+Pote1=['Manchester City', 'Real Madrid', 'Bayern de Munique', 'PSG','Flamengo', 'Palmeiras', 'River Plate', 'Fluminense']
+Pote2=['Chelsea', 'Borussia Dortmund', 'Inter de Milão', 'Porto', 'Atlético de Madrid', 'Benfica', 'Juventus', 'Red Bull Salzburg']
+Pote3=['Al-Hilal', 'Ulsan Hyundai', 'Al-Ahly', 'Wydad Casablanca', 'Monterrey', 'León', 'Boca Juniors', 'Botafogo']
+Pote4=['Urawa Red Diamonds', 'Al-Ain', 'Espérance de Tunis', 'Mamelodi Sundowns', 'Pachuca', 'Seattle Sounders', 'Auckland City', 'Inter Miami']
 continentes=[Europa,America,Oceania,Asia]
-Numgps= len(Europa + America + Africa + Oceania + Asia)/4
+Potes=[Pote1,Pote2,Pote3,Pote4]
 grupo=[]
-i=1
-while Numgps>=i:
-    for time in continentes:
+grupos = {}
+i = 1  # Inicia o contador de grupos
+while i <= 8:
+    grupo = []  # Reinicia a lista do grupo para cada iteração do `while`
+    for time in Potes:
+        # Sorteia um time de cada pote
         sorteio = random.choice(time)
-        grupo.append(sorteio)
-        
-    print(f"Grupo {i}: {grupo}")
-    grupo=[]
-    i+=1
+        grupo.append(sorteio)  # Adiciona ao grupo
+    grupos[f"Grupo{i}"] = grupo  # Associa o grupo ao seu nome
+    print(f"Grupo {i}: {grupo}")  # Exibe o grupo formado
+    i += 1  # Incrementa o contador de grupos
+
 
 
 
